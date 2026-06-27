@@ -1,15 +1,14 @@
-// lib/firebase.ts
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-// Your web app's Firebase configuration
+// ดึงค่าจากตัวแปร Environment แทนการพิมพ์รหัสลงไปตรงๆ
 const firebaseConfig = {
-  apiKey: "AIzaSyCZdFvUahV9qVBMZOtEoHqbW2xHKD83g0I",
-  authDomain: "truck-inspection-e1c63.firebaseapp.com",
-  projectId: "truck-inspection-e1c63",
-  storageBucket: "truck-inspection-e1c63.firebasestorage.app",
-  messagingSenderId: "197388325166",
-  appId: "1:197388325166:web:25aa138cad393cb2ac6abf"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
 
 // ป้องกันการ Initialize ซ้ำซ้อนเวลา Next.js ทำการ Hot Reload
