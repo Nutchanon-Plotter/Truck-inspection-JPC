@@ -10,7 +10,7 @@ const prompt = Prompt({
 });
 
 export const metadata: Metadata = {
-  title: "FLEET SAFETY - ระบบตรวจสอบสภาพรถ",
+  title: "JCC_TK SAFETY - ระบบตรวจสอบสภาพรถ",
   description: "Truck Inspection Checklist Application",
 };
 
